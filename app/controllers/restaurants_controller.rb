@@ -18,6 +18,7 @@ class RestaurantsController < ApplicationController
     restaurant_id = params[:id]
     @restaurant = Restaurant.find_by(id: restaurant_id)
     @restaurant.update(id: params[:id], name: params[:name], address: params[:address], website: params[:website], rating: params[:rating], description: params[:description])
+    #updating this from postman requires all attributes be completed or they will be null when updated
 
     render :show
   end
