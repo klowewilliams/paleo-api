@@ -28,7 +28,7 @@ class RestaurantsController < ApplicationController
     @restaurant = Restaurant.find_by(id: restaurant_id)
     @restaurant.destroy
 
-    render :nothing => true, :status => 200, :content_type => 'text/html'
+    render :nothing => true, :status => 200
   end
 
 end
