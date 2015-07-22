@@ -3,8 +3,8 @@
  -->
 
   <div ng-controller="restaurantsCtrl" ng-init="setup()">
-  <input ng-model="nameFilter">
-    <div ng-repeat="restaurant in restaurants | filter: {name: nameFilter} ">
+  Filter by restaurant name: <input ng-model="nameFilter">
+    <div ng-repeat="restaurant in restaurants | filter: {name: nameFilter} | orderBy: 'rating':true ">
       <h4 ng-click="toggle = !toggle" > {{ restaurant.name }} </h4>
       <div ng-show="toggle">
       <p> Description: {{ restaurant.description }} </p>
