@@ -9,4 +9,6 @@ Rails.application.routes.draw do
       delete "/restaurants/:id" => 'restaurants#destroy'
     end
   end
+
+  get "/" => 'restaurants#index'
 end
