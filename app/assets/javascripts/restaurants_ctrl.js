@@ -24,8 +24,11 @@
       });
     };
 
-    
+    $scope.toggleOrder = function() {
+      $scope.ascending = !$scope.ascending;
+    };
 
-
+    window.scope = $scope;
   });
+  
 }());

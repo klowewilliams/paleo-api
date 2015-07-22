@@ -4,7 +4,11 @@
 
   <div ng-controller="restaurantsCtrl" ng-init="setup()">
   Filter by restaurant name: <input ng-model="nameFilter">
-    <div ng-repeat="restaurant in restaurants | filter: {name: nameFilter} | orderBy: 'rating':true ">
+
+  <div>
+    <button ng-click="toggleOrder()">Order by Rating</button>
+  </div>
+    <div ng-repeat="restaurant in restaurants | filter: {name: nameFilter} | orderBy: 'rating':ascending ">
       <h4 ng-click="toggle = !toggle" > {{ restaurant.name }} </h4>
       <div ng-show="toggle">
       <p> Description: {{ restaurant.description }} </p>
