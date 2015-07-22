@@ -4,7 +4,7 @@
 
   <div ng-controller="restaurantsCtrl" ng-init="setup()">
     <div ng-repeat="restaurant in restaurants">
-      <h4 ng-click="toggle = !toggle" > Restaurant: {{ restaurant.name }} </h4>
+      <h4 ng-click="toggle = !toggle" > {{ restaurant.name }} </h4>
       <div ng-show="toggle">
       <p> Description: {{ restaurant.description }} </p>
       <p> Address: {{ restaurant.address }} </p>
@@ -13,5 +13,20 @@
       <p> Rating: {{ restaurant.rating }} </p>
       </div>
     </div>
+    <hr>
+    <h2> Add a Paleo Friendly Restaurant </h2>
+
+  <div>
+    Name: <input ng-model="newRestaurantName">
+    Description: <input ng-model="newRestaurantDescription">
+    Address: <input ng-model="newRestaurantAddress">
+    Website: <input ng-model="newRestaurantWebsite">
+    Phone: <input ng-model="newRestaurantPhone">
+    Rating: <input ng-model="newRestaurantRating">
+
+    <button ng-click="addRestaurant(newRestaurantName, newRestaurantDescription, newRestaurantAddress, newRestaurantWebsite, newRestaurantPhone, newRestaurantRating)">Add Restaurant</button>
+
+  </div>
+
   </div>
 </div>

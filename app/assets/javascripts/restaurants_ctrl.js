@@ -13,7 +13,12 @@
     //   "toggle = !toggle"
     // };
 
-    $scope.addRestaurant = funciton(name, description)
+     $scope.addRestaurant = function(name, description, address, website, phone, rating) {
+      if(name) {
+        $scope.restaurants.push({name: name,description: description, address: address, website: website, phone: phone, rating, rating});
+        $scope.newRestaurant = null;  
+      }
+    };
 
 
   });
