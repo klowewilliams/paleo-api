@@ -9,7 +9,11 @@ class Api::V1::RestaurantsController < ApplicationController
   end
 
   def create
-    @restaurant = Restaurant.create(id: params[:id], name: params[:name], address: params[:address], website: params[:website], rating: params[:rating], description: params[:description])
+    @restaurant = Restaurant.new(id: params[:id], name: params[:name], address: params[:address], website: params[:website], rating: params[:rating], description: params[:description])
+    if @restaurant.save
+    else
+      render json: { errors: @restaurant.errors.full_messages }, status: 422
+    end
 
     render :show
   end
