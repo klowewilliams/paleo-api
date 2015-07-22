@@ -4,13 +4,14 @@
 
   <div ng-controller="restaurantsCtrl" ng-init="setup()">
     <div ng-repeat="restaurant in restaurants">
-      <h4> Restaurant: {{ restaurant.name }} </h4>
+      <h4 ng-click="toggle = !toggle" > Restaurant: {{ restaurant.name }} </h4>
+      <div ng-show="toggle">
       <p> Description: {{ restaurant.description }} </p>
       <p> Address: {{ restaurant.address }} </p>
       <p> Website: {{ restaurant.website }} </p>
       <p> Phone: {{ restaurant.phone }} </p>
       <p> Rating: {{ restaurant.rating }} </p>
+      </div>
     </div>
-
   </div>
 </div>

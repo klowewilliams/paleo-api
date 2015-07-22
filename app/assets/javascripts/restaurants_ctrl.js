@@ -8,5 +8,12 @@
         $scope.restaurants = response.data;
       });
     }
+
+    // $scope.toggle = function() {
+    //   "toggle = !toggle"
+    // };
+
+
+
   });
 }());
