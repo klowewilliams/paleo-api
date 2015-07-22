@@ -11,4 +11,5 @@ Rails.application.routes.draw do
   end
 
   get "/" => 'restaurants#index'
+  post "/restaurants" => 'restaurants#create'
 end

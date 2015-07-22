@@ -13,6 +13,7 @@
     //   "toggle = !toggle"
     // };
 
+    $scope.addRestaurant = funciton(name, description)
 
 
   });
